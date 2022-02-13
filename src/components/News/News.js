@@ -4,7 +4,7 @@ const News = (props) => {
     const {author, title, description, urlToImage, publishedAt, content} = props.post ;
   return (
     <div>
-      <div className="col">
+      <div className="col card h-100">
         <div className="card h-100">
           <img src={urlToImage} className="card-img-top" alt="news img" />
           <div className="card-body">
