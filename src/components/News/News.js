@@ -1,21 +1,23 @@
 import React from "react";
 
-const News = () => {
+const News = (props) => {
+    const {author, title, description, urlToImage, publishedAt, content} = props.post ;
   return (
     <div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
+      <div className="col">
+        <div className="card h-100">
+          <img src={urlToImage} className="card-img-top" alt="news img" />
+          <div className="card-body">
+            <h5 className="card-title">{title}</h5>
+            <h6><i>Author:{author}</i></h6>
+            <p className="card-text">
+              {description}
             </p>
+
+            <p className="card-text">{content}</p>
           </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+          <div className="card-footer">
+            <small className="text-muted">Date: {publishedAt}</small>
           </div>
         </div>
       </div>
